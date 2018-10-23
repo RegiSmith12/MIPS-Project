@@ -3,3 +3,11 @@
  newLine: .asciiz "\n"
  curr: .word '@'
  comma: .asciiz ","
+.text
+ main:
+  
+  #Display the @ symbol
+  li $v0, 4
+  la $a0, curr
+  syscall
+  

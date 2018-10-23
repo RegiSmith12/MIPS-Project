@@ -11,3 +11,12 @@
   la $a0, curr
   syscall
   
+  addi $s0, $zero, 0 #start with 0
+  
+  li $v0, 1 #to print integers
+  move $a0, $s0 #move the values of $s0 to the $a0 so it can display
+  syscall
+  
+  #~PRINTING THE ID NUMBER~
+  #adding 2 and then printing it
+  addi $s0, $s0, 2

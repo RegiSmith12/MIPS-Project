@@ -20,3 +20,12 @@
   #~PRINTING THE ID NUMBER~
   #adding 2 and then printing it
   addi $s0, $s0, 2
+  li $sv0, 1
+  move $a0, $s0
+  syscall
+  
+  addi $s0, $s0, 6
+  li $v0 1
+  
+  
+  

@@ -5,14 +5,6 @@
  comma: .asciiz ","
 .text
  main:
-  
-  #function to print a new line
-prln:
- li $v0, 4
- la $a0, newLine
- syscall
- 
- jr $ra
  
   #Display the @ symbol
   li $v0, 4
@@ -62,14 +54,22 @@ prln:
   move $a0, $s0
   syscall
   
-  jal prln
-
+  addi $a0, $0, 0xA
+  addi $v0, $0, 0xB
+  syscall
+ 
   #~PRINTING THE LAST NAME~
   
   #prints S
-  lw $s1, start #load the start variable with a word
-  addi $s1, $s1, 45 #load the addition into a temporary register
-  sw $s1, curr #save vslue in t0 to count
-  li $v0, 4 #prepare to load string
-  la $a0, curr #load the address of curr into a0 to print 
+  lw $s1, start #load the start variable as a word
+  addi $s1, $s1, 50 #load addition into a temporary register
+  sw $s1, curr #save the value in t0 to count
+  li $v0, 4 #prepare to load a string
+  la $a0, curr #load the address of curr into $a0 to print
+  syscall
   
+  #prints m
+  lw $s1, curr
+  addi $s1, $s1, 7
+  sw $s1, curr
+  li $v0, 4

@@ -67,6 +67,9 @@ prln:
   #~PRINTING THE LAST NAME~
   
   #prints S
-  li $v0, 4
-  la $a0, start
-  syscall
+  lw $s1, start #load the start variable with a word
+  addi $s1, $s1, 45 #load the addition into a temporary register
+  sw $s1, curr #save vslue in t0 to count
+  li $v0, 4 #prepare to load string
+  la $a0, curr #load the address of curr into a0 to print 
+  

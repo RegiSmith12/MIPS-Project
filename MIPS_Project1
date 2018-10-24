@@ -142,4 +142,8 @@
   la $a0, curr
   syscall
   
+  #end program
+  li $v0, 4
+  la $a0, newLine
+  syscall
   

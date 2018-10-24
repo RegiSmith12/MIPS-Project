@@ -70,6 +70,14 @@
   
   #prints m
   lw $s1, curr
-  addi $s1, $s1, 7
+  addi $s1, $s1, -6
   sw $s1, curr
   li $v0, 4
+  la $a0, curr
+  syscall
+  
+  #prints i
+  lw $s1 curr
+  addi $s1, $s1, -17
+  sw $s1, curr
+  

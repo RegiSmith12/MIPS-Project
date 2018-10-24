@@ -78,6 +78,12 @@
   
   #prints i
   lw $s1 curr
-  addi $s1, $s1, -17
+  addi $s1, $s1, -4
   sw $s1, curr
+  li $v0, 4
+  la $a0, curr
+  syscall
   
+  #prints t
+  lw $s1, curr
+  addi $s1, $s1, 1

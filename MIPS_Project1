@@ -99,3 +99,12 @@
   li $v0, 4
   la $a0, curr
   syscall
+  
+  #prints ,
+  li $v0, 4
+  la $a0, comma
+  syscall
+  
+  #prints r
+  lw $s1, curr
+  addi $s1, $s1, -28

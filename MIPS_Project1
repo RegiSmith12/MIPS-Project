@@ -105,9 +105,14 @@
   la $a0, comma
   syscall
   
+  #prints " "
+  li $a0, 32
+  li $v0, 11
+  syscall
+  
   #prints r
   lw $s1, curr
-  addi $s1, $s1, -28
+  addi $s1, $s1, 10
   sw $s1, curr
   li $v0, 4
   la $a0, curr

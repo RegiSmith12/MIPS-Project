@@ -86,4 +86,11 @@
   
   #prints t
   lw $s1, curr
-  addi $s1, $s1, 1
+  addi $s1, $s1, 11
+  sw $s1, curr
+  li $v0, 4
+  la $a0, curr
+  syscall
+  
+  #prints h
+  lw $s1, curr
